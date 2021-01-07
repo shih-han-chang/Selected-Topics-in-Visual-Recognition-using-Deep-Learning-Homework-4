@@ -15,10 +15,10 @@
   * The test data have 14 low resolution images. 
   
 ## Training model
-  * Plese run the 
-  * To train YOLACT using the train script simply specify the parameters listed in train.py as a flag or manually change them.  
-    - python train.py --config=res101_custom_config
+  * Plese use the data_prepare.py to create a .h file, which includes training data set.  
+  * To train RDN using the train script simply specify the parameters listed in train.py as a flag or manually change them.  
+    - python train.py --train-file trainPath --outputs-dir storePath
 ## Evalution
   * To evaluate a trained network:  
-    - python eval.py --trained_model=res101_custom_100000.pth
-  * Then, it will generate a.json file with test result
+    - python test.py --weights-file weight --image-files imgPath
+   * Then, it will generate the predicted high resolution images
